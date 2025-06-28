@@ -1,0 +1,28 @@
+.nav-full .links a {
+  position: relative;
+  color: white;
+  margin-left: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-full .links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ffb703;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-full .links a:hover::after {
+  width: 100%;
+}
+
+.nav-full .links a:hover {
+  color: #ffb703;
+}

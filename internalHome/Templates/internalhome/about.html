@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me - Boddu Manoj Kumar</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('/media/profile/bg-pattern.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffb703;
+        }
+
+        .fullpage-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 60px 80px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .content-box {
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .content-box h2 {
+            font-size: 34px;
+            color: #ffb703;
+            margin-bottom: 20px;
+        }
+
+        .content-box p,
+        .content-box ul {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .content-box ul {
+            margin-top: 15px;
+            list-style: square;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Boddu Manoj Kumar - About Me
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/projects/">Projects</a>
+        <a href="/blog/">Blog</a>
+    </nav>
+
+    <section class="fullpage-section">
+        <div class="content-box" data-aos="fade-left">
+            <h2>Introduction</h2>
+            <p>
+                I'm <strong>Boddu Manoj Kumar</strong>, a passionate web developer who merges creativity with logic.
+                With strong skills in Django, Python, HTML, and CSS, I design responsive and efficient web applications
+                that prioritize user experience and performance.
+            </p>
+            <p>
+                My development journey is driven by a commitment to writing clean, maintainable code and a curiosity to
+                explore emerging technologies. I enjoy turning ideas into real-world digital products and believe that
+                attention to detail is what separates good code from great solutions.
+            </p>
+
+            <h2 data-aos="fade-right" data-aos-delay="300">Education</h2>
+            <ul data-aos="fade-up" data-aos-delay="500">
+                <li><strong>B.Tech in Computer Science</strong> – Siddhartha Institute of Technology and Sciences [2022–2026]</li>
+                <li><strong>Intermediate (MPC)</strong> – Sri Veda Junior College [2020–2022]</li>
+                <li><strong>SSC</strong> – Sai Krupa High School [2020]</li>
+            </ul>
+
+            <h2 data-aos="fade-right" data-aos-delay="600">Skills</h2>
+            <ul data-aos="fade-up" data-aos-delay="800">
+                <li><strong>Languages:</strong> Python, JavaScript, HTML5, CSS3</li>
+                <li><strong>Frameworks:</strong> Django, Bootstrap, jQuery</li>
+                <li><strong>Tools:</strong> Git, VS Code, Postman, MySQL</li>
+                <li><strong>Concepts:</strong> REST APIs, MVC Architecture, Responsive Design</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Boddu Manoj Kumar | Designed with purpose and precision.
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+</body>
+</html>
