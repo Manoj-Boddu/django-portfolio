@@ -1,25 +1,28 @@
 from pathlib import Path
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Media files (for user uploads)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Static files (CSS, JS, images)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Required for Render deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production deployment (e.g. Render)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'internalHome', 'static')]  # ✅ Add this line
+
+# Media files (e.g. profile images)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4-_a-49&^&m3-b=m3!8gso-6)(bat_5xpx7izd9qa9+ibzvk&4'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Set to False in production
+# Turn off debug in production!
+DEBUG = True
 
-# ✅ Add your deployed URL here
-ALLOWED_HOSTS = ['manoj-kumar-portfolio.onrender.com', 'www.manoj-kumar-portfolio.onrender.com']
+ALLOWED_HOSTS = [
+    'manoj-kumar-portfolio.onrender.com',
+    'www.manoj-kumar-portfolio.onrender.com'
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -29,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'internalHome',
+    'internalHome',  # Your app
 ]
 
 MIDDLEWARE = [
@@ -47,7 +50,7 @@ ROOT_URLCONF = 'home.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'internalHome' / 'templates'],
+        'DIRS': [BASE_DIR / 'internalHome' / 'templates'],  # ✅ Template path
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,20 +72,12 @@ DATABASES = {
     }
 }
 
-# Password validation
+# Password validators
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
 # Internationalization
@@ -91,5 +86,5 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Default primary key field type
+# Default primary key field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -125,14 +125,19 @@
 
     .resume-download {
       display: inline-block;
-      margin-top: 30px;
-      padding: 12px 20px;
+      margin-top: 25px;
+      padding: 12px 24px;
       background-color: #ffb703;
       color: black;
       font-weight: 600;
-      border-radius: 8px;
+      font-size: 16px;
+      border-radius: 30px;
       text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .resume-download i {
+      margin-right: 8px;
     }
 
     .resume-download:hover {
@@ -197,11 +202,14 @@
         <a href="https://twitter.com/manojnetha" target="_blank">@manoj netha</a>
       </div>
 
-      <!-- Social + Resume Download -->
       <div class="social-icons">
         <a href="https://linkedin.com/in/manoj-kumar-boddu" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://twitter.com/manojnetha" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="{% static 'resume/Manoj_Boddu_Resume.pdf' %}" download class="resume-download">
+      </div>
+
+      <!-- Resume Download Button -->
+      <div style="text-align: center;">
+        <a href="{% static 'resume/Manoj_Boddu_Resume.pdf' %}" class="resume-download" download>
           <i class="fas fa-file-download"></i> Download Resume
         </a>
       </div>
