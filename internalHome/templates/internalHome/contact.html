@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,6 +123,23 @@
       color: #ffd166;
     }
 
+    .resume-download {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #ffb703;
+      color: black;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .resume-download:hover {
+      background-color: #ffd166;
+      color: black;
+    }
+
     @media (max-width: 600px) {
       .contact-card {
         padding: 40px 25px;
@@ -175,19 +193,17 @@
       </div>
 
       <div class="info">
-        <i class="fab fa-instagram"></i>
-        <a href="https://instagram.com/manojmanu401" target="_blank">@manojmanu401</a>
-      </div>
-
-      <div class="info">
         <i class="fab fa-twitter"></i>
         <a href="https://twitter.com/manojnetha" target="_blank">@manoj netha</a>
       </div>
 
+      <!-- Social + Resume Download -->
       <div class="social-icons">
         <a href="https://linkedin.com/in/manoj-kumar-boddu" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com/manojmanu401" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/manojnetha" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="{% static 'resume/Manoj_Boddu_Resume.pdf' %}" download class="resume-download">
+          <i class="fas fa-file-download"></i> Download Resume
+        </a>
       </div>
     </div>
   </section>
