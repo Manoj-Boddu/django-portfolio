@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Boddu Manoj Kumar</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      font-family: 'Outfit', sans-serif;
+      height: 100%;
+      background: url('/media/profile/bg-pattern.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ffb703;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #ffb703; }
+
+    .main-section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .contact-card {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 60px;
+      border-radius: 20px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffb703;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+
+    .info i {
+      margin-right: 20px;
+      color: #ffd166;
+      width: 28px;
+      text-align: center;
+    }
+
+    .info a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info a:hover { color: #00d4ff; }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover { color: #ffd166; }
+
+    .resume-download {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #ffb703;
+      color: black;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .resume-download:hover {
+      background-color: #ffd166;
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .contact-card { padding: 40px 25px; }
+      h1 { font-size: 28px; }
+      .info {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 18px;
+      }
+      .info i { margin-bottom: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/projects/">Projects</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="main-section">
+    <div class="contact-card" data-aos="fade-up">
+      <h1>Contact Me</h1>
+
+      <div class="info">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+918074192205">+91 8074192205</a>
+      </div>
+
+      <div class="info">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:boddu.manojkumar26@gmail.com">boddu.manojkumar26@gmail.com</a>
+      </div>
+
+      <div class="info">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://linkedin.com/in/manoj-kumar-boddu" target="_blank">manoj kumar boddu</a>
+      </div>
+
+      <div class="info">
+        <i class="fab fa-twitter"></i>
+        <a href="https://x.com/Man92540918292?t=OacrJ8WvUZoiTTJAALMseA&s=09" target="_blank">@manoj</a>
+      </div>
+
+      <!-- Social + Resume Download -->
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/manoj-kumar-boddu" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/Man92540918292?t=OacrJ8WvUZoiTTJAALMseA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="/media/resume/Manoj_Kumar_Resume.pdf" download class="resume-download">
+          <i class="fas fa-file-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+</body>
+</html>

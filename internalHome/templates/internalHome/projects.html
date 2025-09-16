@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects - Boddu Manoj Kumar</title>
+
+  <!-- Fonts, Icons, AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Outfit', sans-serif;
+      height: 100%;
+      background: url('/media/profile/bg-pattern.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ffb703;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #ffb703;
+    }
+
+    .main-section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 60px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffb703;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 15px #ffb703;
+    }
+
+    .project-card h2 {
+      font-size: 24px;
+      color: #ffd166;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #e0e0e0;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 16px;
+      color: #00d4ff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    .project-card i {
+      margin-right: 8px;
+      color: #ffb703;
+    }
+
+    @media (max-width: 600px) {
+      .projects-container {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/projects/">Projects</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="main-section">
+    <div class="projects-container" data-aos="fade-up">
+      <h1><i class="fas fa-project-diagram"></i> My Projects</h1>
+
+      <div class="grid">
+        <div class="project-card">
+          <h2><i class="fas fa-money-bill-wave"></i> Currency Converter with GUI</h2>
+          <p>Built a real-time currency converter using Python and Tkinter with a user-friendly GUI and live exchange rates.</p>
+          <a href="https://github.com/Manoj-Boddu" target="_blank">🔗 View on GitHub</a>
+        </div>
+
+        <div class="project-card" > <OnClick="https://github.com/Manoj-Boddu">
+          <h2><i class="fas fa-network-wired"></i> Network Sniffer</h2>
+          <p>Developed a packet-sniffing tool using Python and Scapy to analyze network traffic for learning network protocols.</p>
+          <a href="https://github.com/Manoj-Boddu" target="_blank">🔗 View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h2><i class="fas fa-shield-alt"></i> Phishing Awareness Training</h2>
+          <p>Designed an interactive cybersecurity training module for non-technical users to detect and prevent phishing attacks.</p>
+          <a href="https://va0x61ee6s.app.youware.com/" target="_blank">🔗 View Live Project</a>
+        </div>
+
+        <!-- Add more project-card blocks here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+</body>
+</html>
